@@ -109,13 +109,27 @@ pevBtn.addEventListener('click', function(){
   showPerson(currentItem)
 })
 
+const getElement = (selector) => {
+  const element = document.querySelector(selector)
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+  if (element) return element
+  throw Error(
+    `Please double check your class names, there is no ${selector} class`
+  )
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".toggle i");
+  const navLinks = document.querySelector(".navlinks");
+  const showLinksClass = 'showlinks';
+
+  toggle.addEventListener("click", function() {
+      if (navLinks.classList.contains(showLinksClass)) {
+          navLinks.classList.remove(showLinksClass);
+      } else {
+          navLinks.classList.add(showLinksClass);
+      }
+  });
+});
+
+
