@@ -45,8 +45,8 @@ nav span{
     width: 200px;
     height: 150px;
     object-fit: cover;
-    border: 3px solid #30447a;
     border-radius: 5px;
+    box-shadow: 5px 7px 33px 1px rgba(20, 37, 70, 0.57);
 }
 .menu-item{
     display: flex;
@@ -72,8 +72,6 @@ nav span{
 .section-center{
     margin-top: 30px;
     justify-content: center;
-    /*display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     flex-wrap: wrap;
     gap: 20px; 
@@ -140,7 +138,7 @@ footer{
   }
   .footer-menu ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     padding: 10px 10px;
   }
@@ -148,5 +146,4 @@ footer{
     text-decoration: underline;
   }
 
-  /*PRODUCTS PAGE RESPONSIVENESS  */
-.section-center{}
+  /*===================== PRODUCTS PAGE RESPONSIVENESS ==============================*/
