@@ -1,44 +1,3 @@
-// Slider JS
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-
-
-const navToggle = document.querySelector('.togle');
-const links = document.querySelector('.links');
-
-navToggle.addEventListener('click', function() {
-  if (links.classList.contains('show')) {
-    links.classList.remove('show');
-  } else {
-    links.classList.add('show');
-  }
-}); 
 
 
 const reviews = [{
@@ -118,18 +77,13 @@ const getElement = (selector) => {
   )
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const toggle = document.querySelector(".toggle i");
-  const navLinks = document.querySelector(".navlinks");
-  const showLinksClass = 'showlinks';
+const btns = document.querySelectorAll('.question-btn');
 
-  toggle.addEventListener("click", function() {
-      if (navLinks.classList.contains(showLinksClass)) {
-          navLinks.classList.remove(showLinksClass);
-      } else {
-          navLinks.classList.add(showLinksClass);
-      }
-  });
-});
+btns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        const question = e.currentTarget.parentElement.parentElement;
+        question.classList.toggle('show-text')
+    })
+})
 
 

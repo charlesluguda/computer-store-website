@@ -26,71 +26,31 @@
 <body>
     <!--========================== NAVBAR START HERE =======================================-->
     <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="assets/images/logo .png" alt="">
-            </div>
-            <div class="navlinks">
-                <ul class="links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="products/products.html">Products</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="toggle">
-                <i class="bi bi-list"></i>
-            </div>
+       <div class="container">
+        <div class="nav-logo">
+            <a href="index.html">Mos Computer Store</a>
         </div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html#aboutus">about us</a></li>
+                <li><a href="contact.html">contacts</a></li>
+                <li><a href="products/products.html">products</a></li>
+            </ul>
+        </div>
+        <div class="menu-btn">
+            <i class="bi bi-list"></i>
+        </div>
+       </div>
     </nav>
 
     <!--========================== HOME SECTION START HERE =======================================-->
     <div class="home" id="home">
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <img src="assets/images/images-1.jpg" style="width:100%">
-              <div class="text">
-                <h2>We are Mos Computer Store</h2>
-                <p>
-                 Welcome to Mos Computer Store, where our passionate team of tech enthusiasts provides top-quality computers,
-                 expert guidance, competitive prices, and exceptional customer support 
-                 to help you navigate the world of computing with confidence.
-                </p>
-            </div>
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="assets/images/images-2.jpg" style="width:100%">
-              <div class="text">
-                <h2>We are Mos Computer Store</h2>
-                <p>
-                    Welcome to Mos Computer Store, where our passionate team of tech enthusiasts provides top-quality computers, expert guidance, competitive prices, and exceptional customer support to help you navigate the world of computing with confidence.
-                </p>
-            </div>
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="assets/images/images-3.jpg" style="width:100%">
-              <div class="text">
-                <h2>We are Mos Computer Store</h2>
-                <p>
-                    Welcome to Mos Computer Store, where our passionate team of tech enthusiasts provides top-quality computers, expert guidance, competitive prices, and exceptional customer support to help you navigate the world of computing with confidence.
-                </p>
-            </div>
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
+        <div class="container">
+            <h1>mos computer store</h1>
+            <p>Welcome to Mos Computer Store, where our passionate team of tech enthusiasts provides top-quality computers, 
+                expert guidance, competitive prices, and exceptional customer support to help you navigate the world of computing with confidence.</p>
+        </div>
     </div>
 
     <!--========================== ABOUT US SECTION START HERE =======================================-->
@@ -158,52 +118,106 @@
             <i class="bi bi-arrow-right-circle-fill nextbtn"></i>
         </div>
     </div>
-
-    <!--========================== CONTACT US SECTION START HERE =======================================-->
-    <div class="contactus" id="contact">
-        <h2>Get in Touch</h2>
-        <p>Feel free to drop us a message—we're here to answer your questions, assist you, or just chat about all things computer!</p>
-        <div class="contacts-actions">
-            <div class="contacts-box">
-                <span class="material-symbols-outlined">
-                    location_on
-                </span>
-                <h4>Location</h4>
-                <p>Magomeni Mapipa</p>
+    <div class="faqs">
+        <h2>FREQUENT ASKED QUESTIONS</h2>
+        <div class="line"></div>
+        <div class="questions">
+            <div class="center-sections">
+                <!--asked questions-->
+                <article class="question">
+                    <div class="question-title">
+                        <p>How long does shipping take?</p>
+                        <button type="button" class="question-btn">
+                                <span class="material-symbols-outlined plus-icon">
+                                    add
+                                    </span>
+                                    <span class="material-symbols-outlined minus-icon">
+                                        remove
+                                        </span>
+                        </button>
+                    </div>
+    
+                    <!--Questions text-->
+                    <div class="question-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad soluta accusamus iusto eaque ipsum eius itaque esse cum molestiae.</p>
+                    </div>
+                </article>
+                <!--end asked questions-->
+    
+                <!--asked questions-->
+                <article class="question">
+                    <div class="question-title">
+                        <p>How do I reset my Password?</p>
+                            <button type="button" class="question-btn">
+                                <span class="material-symbols-outlined plus-icon">
+                                                add
+                                </span>
+                                <span class="material-symbols-outlined minus-icon">
+                                                    remove
+                                </span>
+                            </button>
+                    </div>
+                
+                    <!--Questions text-->
+                    <div class="question-text">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad soluta accusamus iusto eaque ipsum eius itaque esse cum molestiae.</p>
+                    </div>
+                </article>
+                <!--end asked questions-->
+    
+                <!--asked questions-->
+                <article class="question">
+                    <div class="question-title">
+                        <p>Can I return my Purchase?</p>
+                        <button type="button" class="question-btn">
+                                <span class="material-symbols-outlined plus-icon">
+                                    add
+                                    </span>
+                                    <span class="material-symbols-outlined minus-icon">
+                                        remove
+                                        </span>
+                        </button>
+                    </div>
+    
+                    <!--Questions text-->
+                    <div class="question-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad soluta accusamus iusto eaque ipsum eius itaque esse cum molestiae.</p>
+                    </div>
+                </article>
+                <!--end asked questions-->
+                <!--asked questions-->
+                <article class="question">
+                <div class="question-title">
+                 <p>Can I return my Purchase?</p>
+                    <button type="button" class="question-btn">
+                        <span class="material-symbols-outlined plus-icon">
+                            add
+                        </span>
+                        <span class="material-symbols-outlined minus-icon">
+                            remove
+                        </span>
+                        </button>
+                </div>
+                                
+               <!--Questions text-->
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad soluta accusamus iusto eaque ipsum eius itaque esse cum molestiae.</p>
+                </div>
+                </article>
+                <!--end asked questions-->
             </div>
-            <div class="contacts-box">
-                <span class="material-symbols-outlined phone">
-                    smartphone
-                </span>
-                <h4>Phone</h4>
-                <p>Call us at<a href="tel:+255 752903509"> 123-456-789</a></p>
-            </div>
-            <div class="contacts-box">
-                <span class="material-symbols-outlined live">
-                    chat
-                </span>
-                <h4>Live Chat</h4>
-                <p><a href="https://your-live-chat-url" target="_blank">Chat with us</a> during working hours</p>
-            </div>
-        </div>
+    </div>
     </div>
 
     <!--========================== FOOTER SECTION START HERE =======================================-->
     <footer>
-        <div class="social-icons">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-twitter-x"></i>
-        </div>
-        <div class="footer-menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Products</a></li>
-            </ul>
-        </div>
-        <div class="footer-text">
-            <p>All Rights reserved &copy 2023</p>
+        <div class="container">
+            <p>All Right Reserved &copy Mos Computer Store</p>
+            <div class="socials">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+            </div>
+            <p><small>Developed and Maintained <a href="#">@luguda</a></small></p>
         </div>
     </footer>
     <script src="script.js"></script>

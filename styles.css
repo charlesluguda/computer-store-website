@@ -4,176 +4,125 @@
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
+li{
+  list-style: none;
+}
 /*==================== NAVBAR SECTION =================================*/
 nav{
   height: 70px;
   width: 100%;
+  max-width: 1200px; /* Set a max-width to the container */
   color: #fff;
   position: fixed;
   display: flex;
-  z-index: 2;
-  background: #30447a;
-  text-align: center;
-  justify-content: center;
-}
-.navbar{
-  width: 80%;
-  margin: auto;
-  display: flex;
-  text-align: center;
   justify-content: space-between;
+  /* z-index: 2; */
+  background: #30447a;
 }
-.logo img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+nav .container{
+  width: 80%;
+  max-width: 1200px; /* Set a max-width to the container */
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  text-transform: uppercase;
 }
-.navlinks .links{
+.nav-logo a{
+  font-size: 18px;
+  font-weight: 600;
+}
+.navlinks ul{
   display: flex;
   gap: 20px;
-  margin: 10px 10px;
+  font-size: 15px;
 }
-.links li a{
-  color: #fff;
-  text-decoration: none;
+.navlinks ul li a{
+  position: relative;
+  margin-bottom: 10px;
 }
-.toggle i{
-  font-size: 24px;
-  justify-content: center;
-  text-align: center;
-  margin: 10px 10px;
+.navlinks ul li a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
 }
-
-/*==================== NAVBAR RESPONSIVENESS ====================================*/
-@media only screen and (min-width: 900px){
-  .toggle{
-    display: none;
-  }
+.navlinks ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
 }
-
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 700px){
   .navlinks{
-    display: none;
-  }
-  .showlinks.showlinks {
     position: absolute;
-    right: 0;
     top: 70px;
-    width: 250px;
-    height: 300px;
-    display: block;
-    background: #30447a;
-  }
-  .showlinks .links{
+    right: 0px;
     display: flex;
     flex-direction: column;
-    padding: 10px 10px;
+    align-items: center;
     text-align: center;
-    justify-content: center;
+    background: #30447a;
+    color: #fff;
+    width: 300px;
+    height: 200px;
+  }
+  .navlinks ul{
+    display: flex;
+    flex-direction: column;
   }
 }
-
 
 /*==================== NAVBAR SECTION ENDS HERE =================================*/
 
 
 /*==================== HOME SECTION START HERE =================================*/
+section{
+  height: 100vh;
+}
 .home{
   padding-top: 70px;
   width: 100%;
-  overflow: hidden;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(assets/images/images-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-/* ===================== SLIDE SHOW CONTAINER ==================== */
-.slideshow-container {
-    width: 100%;
-    position: relative;
-    margin: auto;
-  }
-  
-  /* =================== NEXT $ PREV BUTTON ===================== */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* ============== NEXT BUTTON POSITION ================ */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
- 
-  /* ============== CAPTION TEXT=========== */
-  .text {
-    color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    padding: 8px 12px;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    top: 40px;
-    text-align: center;
-  }
-  .text h2{
-    font-size: 40px;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
+.home .container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home .container h1{
+  text-transform: capitalize;
+  font-size: 50px;
+  font-weight: 700;
+}
+.home .container p{
+  font-size: 25px;
+}
+
 /*==================== HOME SECTION ENDS HERE =================================*/
 
 /*==================== ABOUT US SECTION START HERE =================================*/
@@ -207,15 +156,15 @@ nav{
 }
 
 .about-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
   justify-content: center;
   padding: 10px 10px;
-  margin: 30px 10px;
+  margin: auto;
 }
 
 .about-container .about-box {
-  width: 300px;
   margin: 10px 10px;
   padding: 10px 10px;
   margin: 10px 10px;
@@ -325,107 +274,167 @@ nav{
 }
 /*==================== CUSTOMER REVIEWS SECTION ENDS HERE =================================*/
 
-/*==================== CONTACT SECTION START HERE =================================*/
-.contactus {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  justify-content: center;
-  padding-top: 70px;
-  text-align: center;
-  /* padding: 10px 10px; */
-  padding-bottom: 10px;
-  background-image: url(assets/images/contact-us-concept-wood-block-symbol-telephone-mail-address-desk_52701-83.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.contactus::before {
-  content: ""; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(51, 48, 48, 0.404); 
-  z-index: 1; 
-}
-
-.contactus h2,
-.contactus p,
-.contactus .contacts-actions {
-  position: relative; 
-  z-index: 1;
-  color: white; 
-}
-
-.contactus h2 {
-  padding: 10px 10px;
-  font-size: 25px;
-}
-
-.contacts-actions {
+/*============================ FAQS SECTION =====================================*/
+.faqs{
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  height: 500px;
+  margin: 0;
+}
+.faqs h2{
+  margin: 10px 10px;
+}
+.faqs .line{
+  margin: 10px auto;
+}
+.questions {
   text-align: center;
-  padding: 30px 10px;
+  align-items: center;
+  justify-content: center;
 }
 
-.contacts-box {
-  width: 200px;
-  height: 200px;
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.center-sections {
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+
+.question {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  background: whitesmoke;
+  height: auto;
+  width: 600px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-title .minus-icon .plus-icon{
+  font-size: 10px;
+  cursor: pointer;
   border: 2px solid black;
-  border-radius: 5px;
-  margin: 10px 20px;
+  display: flex;
+  margin: 2px 0px;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.question-text p {
+  border-top: 1px solid black;
+  margin: 10px 0;
+}
+button{
+  padding: 0.1px 0.5px;
+  border: 2px slod black;
+}
+
+/* hide text*/
+.question-text{
+  display: none;
+}
+.show-text .question-text{
+  display: block;
+}
+.minus-icon{
+  display: none;
+}
+.show-text .minus-icon{
+  display: inline-block;
+}
+.show-text .plus-icon{
+  display: none;
+}
+/*===========================FAQS ENDS HERE ============================*/
+
+/*==================== CONTACTS SECTION START HERE =================================*/
+section{
+  height: 100vh;
+}
+.contant-sections{
+  color: #000;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 30% 60%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form input{
+  padding: 13px 10px;
+  background: whitesmoke;
+  border: none;
+}
+form textarea{
+  border: none;
+  background: whitesmoke;
+}
+form button{
+  width: 150px;
   padding: 10px 10px;
-}
-
-.contacts-box a {
-  text-decoration: underline;
-  color: black;
-}
-
-.contacts-box span {
-  margin-top: 20px;
+  cursor: pointer;
   background: #30447a;
-  padding: 15px 15px;
-  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.contacts-info{
+  background: whitesmoke;
+  height: 350px;
+  padding: 10px 20px;
+}
+.contacts-info h2{
+  margin-bottom: 10px;
+}
+.contacts-info p{
+  margin-bottom: 10px;
+}
+.info h4{
+  font-size: 13px;
+}
+.info p{
+  font-size: 15px;
 }
 
-.contacts-box .live {
-  background: green;
-}
-
-.contacts-box .phone {
-  background: red;
-}
-
-.contacts-box h4 {
-  padding: 10px 10px;
-}
-
-/*=============== RESPONSIVE STYLES =========================*/
-@media only screen and (max-width: 800px) {
-  .contacts-actions {
-    display: block;
-  }
-  .contactus {
-    height: auto;
-    margin: auto;
-  }
-  .contacts-box {
-    width: 60%;
-    margin: 10px auto; 
+@media only screen and (max-width: 760px) {
+  .contant-sections{
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
-/*==================== CONTACT SECTION ENDS HERE =================================*/
+/*==================== CONTACTS SECTION ENDS HERE =================================*/
 
 /*==================== FOOTER SECTION START HERE =================================*/
 footer{
   width: 100%;
-  background: black;
-  height: 250px;
+  background: #30447a;
+  height: 100px;
   text-align: center;
   color: white;
   padding: 10px 10px;
@@ -434,42 +443,9 @@ footer{
   align-items: center;
   justify-content: center;
 }
-footer .social-icons{
-  display: inline-block;
-}
-footer .bi{
-  width: 60px;
-  height: 50px;
-  font-size: 24px;
+footer .container{
+  width: 80%;
+  margin: auto;
   text-align: center;
   justify-content: center;
-  margin-top: 50px;
-  background: white;
-  color: black;
-  border-radius: 50%;
-  padding: 10px 10px;
-  margin: 10px 10px;
-  cursor: pointer;
-}
-footer .bi:hover{
-  background: #30447a;
-}
-.footer-menu{
-  padding: 10px 10px;
-  margin: 30px 10px;
-}
-.footer-menu ul{
-  display: flex;
-}
-li{
-  list-style: none;
-}
-.footer-menu ul li a{
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  padding: 10px 10px;
-}
-.footer-menu ul li a:hover{
-  text-decoration: underline;
 }

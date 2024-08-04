@@ -4,27 +4,90 @@
     margin: 0;
     box-sizing: border-box;
 }
-nav{
-    width: 100%;
-    height: 70px;
-    background: #30447a;
-    text-align: center;
-    padding: 10px 10px;
-} 
-nav a{
+a{
     text-decoration: none;
-    color: white;
-}
-nav h2{
-    margin: 10px 10px;
-}
-nav span{
-    color: red;
-}
+    color: #fff;
+  }
+  li{
+    list-style: none;
+  }
+  /*==================== NAVBAR SECTION =================================*/
+  nav{
+    height: 70px;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    background: #30447a;
+  }
+  nav .container{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-transform: uppercase;
+  }
+  .nav-logo a{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .navlinks ul{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+  }
+  .navlinks ul li a{
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .navlinks ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+  }
+  .navlinks ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+  }
+
+  @media only screen and (max-width: 700px){
+    .navlinks{
+      position: absolute;
+      top: 70px;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #30447a;
+      color: #fff;
+      width: 300px;
+      height: 200px;
+    }
+    .navlinks ul{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  /*==================== NAVBAR SECTION ENDS HERE =================================*/
 .menu{
     background: #d6d5d3;
     width: 100%;
     height: auto;
+    padding-top: 60px;
 }
 .title{
     justify-content: center;
@@ -33,6 +96,7 @@ nav span{
 }
 .title h2{
     margin-top: 30px;
+    text-transform: uppercase;
 }
 .title .underline{
     width: 70px;
@@ -41,21 +105,26 @@ nav span{
     background: #30447a;
     margin: 10px auto;
 }
-.photo{
-    width: 200px;
+/* .photo{
+    width: 300px;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 5px 7px 33px 1px rgba(20, 37, 70, 0.57);
-}
+} */
 .menu-item{
     display: flex;
     width: 500px;
     height: 200px;
     margin: auto;
 }
+.menu-item .photo{
+    width: 350px;
+}
+
 .menu-info{
     padding: 10px 10px;
+    font-size: 15px;
 }
 .menu-info header{
     justify-content: space-between;
@@ -86,8 +155,8 @@ nav span{
     width: 100px;
     padding: 5px 10px;
     margin: 10px 10px;
-    border: 2px solid #30447a;
-    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
     cursor: pointer;
 }
 .btn-container button:hover{
@@ -96,8 +165,8 @@ nav span{
 }
 footer{
     width: 100%;
-    background: black;
-    height: 250px;
+    background: #30447a;
+    height: 100px;
     text-align: center;
     color: white;
     padding: 10px 10px;
@@ -106,44 +175,11 @@ footer{
     align-items: center;
     justify-content: center;
   }
-  footer .social-icons{
-    display: inline-block;
-  }
-  footer .bi{
-    width: 60px;
-    height: 50px;
-    font-size: 20px;
+  footer .container{
+    width: 80%;
+    margin: auto;
     text-align: center;
     justify-content: center;
-    margin-top: 50px;
-    background: white;
-    color: black;
-    border-radius: 50%;
-    padding: 10px 10px;
-    margin: 10px 10px;
-    cursor: pointer;
-  }
-  footer .bi:hover{
-    background: #30447a;
-  }
-  .footer-menu{
-    padding: 10px 10px;
-    margin: 30px 10px;
-  }
-  .footer-menu ul{
-    display: flex;
-  }
-  li{
-    list-style: none;
-  }
-  .footer-menu ul li a{
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-    padding: 10px 10px;
-  }
-  .footer-menu ul li a:hover{
-    text-decoration: underline;
   }
 
   /*===================== PRODUCTS PAGE RESPONSIVENESS ==============================*/
