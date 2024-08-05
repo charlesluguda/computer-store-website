@@ -79,6 +79,24 @@ const menu = [
         img: "images/hprobook.jpg",
         desc: "Storage - 128SSD, RAM - 4GB DDR4, CPU Speed - 2.3GHz, CPU Mode - intel corei3, Graphics Coprocessor - Intel HD Graphic 520, Screen Size - 11.6''"
     },
+    ,
+    {
+        id: 11,
+        title: "HP PROBOOK",
+        category: "hp",
+        price: "380, 000",
+        img: "images/hprobook.jpg",
+        desc: "Storage - 128SSD, RAM - 4GB DDR4, CPU Speed - 2.3GHz, CPU Mode - intel corei3, Graphics Coprocessor - Intel HD Graphic 520, Screen Size - 11.6''"
+    },
+    ,
+    {
+        id: 12,
+        title: "HP PROBOOK",
+        category: "hp",
+        price: "380, 000",
+        img: "images/hprobook.jpg",
+        desc: "Storage - 128SSD, RAM - 4GB DDR4, CPU Speed - 2.3GHz, CPU Mode - intel corei3, Graphics Coprocessor - Intel HD Graphic 520, Screen Size - 11.6''"
+    },
 ]
 const contentCenter = document.querySelector('.section-center');
 const filterBtns = document.querySelectorAll('.btn-filter');

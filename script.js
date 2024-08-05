@@ -27,18 +27,17 @@ const reviews = [{
 },
 ];
 
+
+// =============================== TESTIMONIALS SCRIPT =================================== //
 const Name = document.getElementById("name");
 const desc = document.getElementById("desc");
 
 const pevBtn = document.querySelector('.prevbtn');
 const nextBtn = document.querySelector('.nextbtn');
 
-//set start item
 let currentItem = 0;
 
-//load initial item
 window.addEventListener('DOMContentLoaded', function(){
-  //console.log("shake and bake")
   showPerson(currentItem);
   
 })
@@ -77,6 +76,7 @@ const getElement = (selector) => {
   )
 }
 
+// ================================== FAQS SCRIPT =================================== //
 const btns = document.querySelectorAll('.question-btn');
 
 btns.forEach(function(btn){
@@ -86,4 +86,22 @@ btns.forEach(function(btn){
     })
 })
 
+//================ MENU TOGGLE SCRIPTS ===========================//
+humburger = document.querySelector(".menu-btn");
+humburger.onclick = function(){
+  navBar = document.querySelector(".navlinks");
+  navBar.classList.toggle("showlinks");
+}
 
+window.onclick = function(event) {
+  if (!humburger.contains(event.target) && !navBar.contains(event.target)) {
+      navBar.classList.remove("showlinks");
+  }
+};
+
+const navLinks = document.querySelectorAll(".navlinks a");
+navLinks.forEach(link => {
+  link.onclick = function() {
+      navBar.classList.remove("showlinks");
+  };
+});
